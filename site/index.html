@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   </head>
 
-  <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
+  <body bgcolor="#f2f2f2">
+<nav class="navbar is-success" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      <img src="/mate.png" width="32" height="32"> Whatsapp Mate
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -38,33 +38,34 @@
   </div>
 </nav>
 
+<br />
 
 <div class="columns">
   <div class="column">
     <div class="box">
-        <h1 class="title">Tu Mensaje</h1>
+        <h1 class="title">&#128172; Tu Mensaje</h1>
 
         <div class="field">
             <label class="label">N&uacute;mero de tel&eacute;fono</label>
             <div class="control">
-                <input class="input" type="text" placeholder="11-1234-5678" name="telefono">
+                <input class="input" type="text" placeholder="11-1234-5678" id="mobileField">
             </div>
         </div>
 
         <div class="field">
             <label class="label">Mensaje</label>
             <div class="control">
-                <textarea class="textarea" placeholder="Textarea" name="mensaje"></textarea>
+                <textarea class="textarea" placeholder="Textarea" id="messageField"></textarea>
             </div>
         </div>
 
 
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-link">Enviar</button>
+                <button class="button is-link" id="sendButton">Enviar</button>
             </div>
             <div class="control">
-                <button class="button is-link is-light">Cancelar</button>
+                <button class="button is-link is-light" id="clearButton">Borrar</button>
             </div>
         </div>
 
@@ -74,12 +75,12 @@
   <div class="column">
     <div class="box">
     <div class="content">
-        <h1 class="title">Que es WAMate ?</h1>
+        <h1 class="title">&#128161; Que es WAMate ?</h1>
         <p>Whatsapp Mate es una peque&ntilde;a aplicaci&oacute;n que te permite enviar mensajes 
         de whatsapp s&oacute;lo con el n&uacute;mero de tel&eacute;fono de la persona, 
         sin tener que agendarlo antes.</p>
 
-        <h1 class="title">Uso</h1>
+        <h1 class="title">&#128246; Uso</h1>
         <ol>
             <li>Ingres&aacute; el n&uacute;mero de t&eacute;lefono con su c&oacute;digo de area, 
             sin cero y luego los otros 8 numeros restantes.</li>
@@ -95,31 +96,5 @@
 
   </body>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
-  }
-
-});
-</script>
+<script src="/app.js" ></script>
 </html>
