@@ -47,7 +47,7 @@ function initNavBar() {
 function sendMessage() {
     var api = 'https://api.whatsapp.com/send/?';
 
-    api += 'phone=+549' + mobileField.value;
+    api += 'phone=+54' + mobileField.value;  /* saque el 9 */
     api += '&text=' + messageField.value;
     api += '&app_absent=1';
 
